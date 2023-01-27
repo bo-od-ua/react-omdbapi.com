@@ -15,9 +15,8 @@ class Search extends React.Component {
 	handleFilter = (event) => {
 		this.setState(
 			{type: event.target.value},
-			()=> this.pros.enterHandler(this.state.search, this.state.type)
+			()=> this.props.enterHandler(this.state.search, this.state.type)
 		);
-//		this.pros.enterHandler(this.state.search, this.state.type);
 	}
 
 	render() {
