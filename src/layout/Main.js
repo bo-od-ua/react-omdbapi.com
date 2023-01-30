@@ -3,7 +3,7 @@ import Movies from '../components/Movies';
 import Search from '../components/Search';
 import Movie from  '../components/Movie';
 
-class Main extends React.Component { //https://tokmakov.msk.ru/blog/item/639
+class Main extends React.Component {
 	state = {
 		show:    'index',
 		movies:  [],

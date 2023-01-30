@@ -1,6 +1,5 @@
 function Movie(props){
 	if(!props.Title){
-console.log(props);
 		return <p>movie not found</p>
 	}
 	const {
