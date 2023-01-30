@@ -3,7 +3,7 @@ import Movies from '../components/Movies';
 import Search from '../components/Search';
 import Movie from  '../components/Movie';
 
-class Main extends React.Component {
+class Main extends React.Component { //https://tokmakov.msk.ru/blog/item/639
 	state = {
 		show:    'index',
 		movies:  [],
@@ -38,7 +38,8 @@ class Main extends React.Component {
 			show:    'movie'
 		});
 
-		fetch(`http://www.omdbapi.com/?apikey=f01b5b97&i=${id}&plot=full`)
+		let url= `http://www.omdbapi.com/?apikey=f01b5b97&i=${id}&plot=full`;
+		fetch(url)
 			.then(response => response.json())
 			.then(data => {
 				this.setState({
@@ -49,7 +50,8 @@ class Main extends React.Component {
 	}
 
 	componentDidMount() {
-		fetch('http://www.omdbapi.com/?apikey=f01b5b97&s=matrix')
+		let url= 'http://www.omdbapi.com/?apikey=f01b5b97&s=matrix';
+		fetch(url)
 			.then(response => response.json())
 			.then(data => {
 				this.setState({
